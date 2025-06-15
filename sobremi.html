@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio</title>
+  <style>
+    /* Importar fuentes TTF locales */
+    @font-face {
+      font-family: 'Ubuntu';
+      src: url('./fonts/Ubuntu-Bold.ttf') format('truetype');
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Ubuntu';
+      src: url('./fonts/Ubuntu-BoldItalic.ttf') format('truetype');
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: 'Ubuntu';
+      src: url('./fonts/Ubuntu-Italic.ttf') format('truetype');
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: 'UbuntuMono';
+      src: url('./fonts/UbuntuMono-Bold.ttf') format('truetype');
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'UbuntuMono';
+      src: url('./fonts/UbuntuMono-Italic.ttf') format('truetype');
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+  font-family: 'Ubuntu', sans-serif;
+  background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
+  color: #ffffff;
+  min-height: 100vh;
+  margin: 0;
+}
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .logo {
+      display: flex;
+      gap: 4px;
+    }
+
+    .logo div {
+      width: 10px;
+      height: 10px;
+      background-color: #ffffff;
+    }
+
+    nav a {
+      color: #ffffff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-size: 1.2rem;
+      position: relative;
+      font-family: 'UbuntuMono', monospace;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #7b2cbf, #9d4edd, #ffffff);
+      border-radius: 2px;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    nav a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .content {
+      padding: 2rem;
+      max-width: fit-content;
+      margin: 0 auto;
+    }
+
+    h2, h3 {
+      margin-bottom: 1rem;
+      color: #9d4edd;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+.enlace-musica {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.enlace-musica:hover {
+      text-shadow: 0 0 8px rgba(157, 78, 221, 0.8);
+      background-color: rgba(157, 78, 221, 0.1);
+      transform: translateX(5px);
+      cursor: pointer;
+    }
+
+    ul {
+      list-style: none;
+      line-height: 1.8;
+      color: #ffffff;
+      font-family: 'UbuntuMono', monospace;
+    }
+
+        ul li {
+      transition: all 0.3s ease;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    ul li:hover {
+      text-shadow: 0 0 8px rgba(157, 78, 221, 0.8);
+      background-color: rgba(157, 78, 221, 0.1);
+      transform: translateX(5px);
+      cursor: pointer;
+    }
+
+ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav a {
+        display: inline-block;
+        margin: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="sobremi.html">Sobre Mi</a>
+      <a href="https://www.youtube.com/@malch2000" target="_blank">Mi Musica</a>
+      <a href="galeria.html">Galeria</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section>
+      <h2>Te Hablare Un Poco Sobre Mi</h2>
+    </section>
+    <section>
+      <p>Me llamo Mathias Adrian López Chamorro, nací el 01/10/2003 en la ciudad de Villarrica, actualmente a la hora de haber creado este proyecto tengo 21 años
+        <br>y soy estudiante de Ingieneria Informática.
+        <br>
+        <br>Me gustan muchos los videojuegos, las peliculas y en especial la música, incluso tengo unos cuantos proyectos disponibles en YouTube que puedes
+        <br>revisar cuando quieras.
+        <br>
+        <br>Si quieres saber más a detalle sobre mis gustos o mi proyecto musical puedes visitar los siguientes enlaces:
+      </p>
+    </section>
+    <br>
+    <section>
+        <h3>Mi Musica</h3>
+        <p><a class="enlace-musica" href="https://www.youtube.com/@malch2000" target="_blank">Aquí</a></p>
+        <br>
+      <h2>Mis gustos</h2>
+      <ul>
+        <li><a href="misjuegos.html">Mis juegos favoritos</a></li>
+        <li><a href="misartistas.html">Mis artistas favoritos</a></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

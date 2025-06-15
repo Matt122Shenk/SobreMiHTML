@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio</title>
+  <style>
+    /* Importar fuentes TTF locales */
+    @font-face {
+      font-family: 'Ubuntu';
+      src: url('./fonts/Ubuntu-Bold.ttf') format('truetype');
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Ubuntu';
+      src: url('./fonts/Ubuntu-BoldItalic.ttf') format('truetype');
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: 'Ubuntu';
+      src: url('./fonts/Ubuntu-Italic.ttf') format('truetype');
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: 'UbuntuMono';
+      src: url('./fonts/UbuntuMono-Bold.ttf') format('truetype');
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'UbuntuMono';
+      src: url('./fonts/UbuntuMono-Italic.ttf') format('truetype');
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+  font-family: 'Ubuntu', sans-serif;
+  background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
+  color: #ffffff;
+  min-height: 100vh;
+  margin: 0;
+}
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .logo {
+      display: flex;
+      gap: 4px;
+    }
+
+    .logo div {
+      width: 10px;
+      height: 10px;
+      background-color: #ffffff;
+    }
+
+    nav a {
+      color: #ffffff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-size: 1.2rem;
+      position: relative;
+      font-family: 'UbuntuMono', monospace;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #7b2cbf, #9d4edd, #ffffff);
+      border-radius: 2px;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    nav a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .content {
+      padding: 2rem;
+      max-width: fit-content;
+      margin: 0 auto;
+    }
+
+    h2, h3 {
+      margin-bottom: 1rem;
+      color: #9d4edd;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    ul {
+      list-style: none;
+      line-height: 1.8;
+      color: #ffffff;
+      font-family: 'UbuntuMono', monospace;
+    }
+
+        ul li {
+      transition: all 0.3s ease;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    ul li:hover {
+      text-shadow: 0 0 8px rgba(157, 78, 221, 0.8);
+      background-color: rgba(157, 78, 221, 0.1);
+      transform: translateX(5px);
+      cursor: pointer;
+    }
+
+.trailers {
+      transition: all 0.3s ease;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    .trailers:hover {
+      text-shadow: 0 0 8px rgba(157, 78, 221, 0.8);
+      background-color: rgba(157, 78, 221, 0.1);
+      transform: translateX(5px);
+      cursor: pointer;
+    }
+
+p a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.imagen-ajustable {
+  width: 100%; 
+  max-width: 600px;
+  height: auto;     
+  border-radius: 8px;
+}
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav a {
+        display: inline-block;
+        margin: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="sobremi.html">Sobre Mi</a>
+      <a href="https://www.youtube.com/@malch2000" target="_blank">Mi Musica</a>
+      <a href="galeria.html">Galeria</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section>
+      <h2>Mis Juegos Favoritos</h2>
+    </section>
+    <section>
+        <h3>The Legend Of Zelda: Tears Of The Kingdom</h3>
+        <img src="https://nintendoeverything.com/wp-content/uploads/Zelda-Tears-Kingdom-screens.jpg" alt="Portada TOTK" class="imagen-ajustable">
+      <p>Trailer: <a class= "trailers" href="https://www.youtube.com/watch?v=sjxLF4IYnJc" target="_blank">The Legend of Zelda: Tears of the Kingdom – Tráiler oficial #3</a>
+      </p>
+      <br>
+      <h3>Silent Hill 2 (2024)</h3>
+        <img src="https://i.redd.it/in-engine-screenshots-of-the-silent-hill-2-remake-from-steam-v0-u4lz04g2luu91.jpg?width=1920&format=pjpg&auto=webp&s=c7032863cfbc8f9523a052ee79606580f0cd86f0" alt="Portada SH2" class="imagen-ajustable">
+      <p>Trailer: <a class= "trailers" href="https://www.youtube.com/watch?v=52trXg2YyI4" target="_blank">
+SILENT HILL 2 REMAKE | MOD LATINO TRAILER</a>
+      </p>
+      <br>
+      <h3>Mortal Komabt 11</h3>
+        <img src="https://www.wog.ch/nas/screens/p4/ps4_mortalkombat11a.jpg" alt="Portada MK11" class="imagen-ajustable">
+      <p>Trailer: <a class= "trailers" href="https://www.youtube.com/watch?v=IUV8MNrUHsI" target="_blank">MK11 - Launch Trailer - Español Latino</a>
+      </p>
+      <br>
+       <h3>Resident Evil 4 (2023)</h3>
+        <img src="https://i.redd.it/some-resident-evil-4-remake-screenshots-in-4k-hdr-v0-ewoka6v6wmpa1.png?width=3840&format=png&auto=webp&s=823ea5d59060dc3e01c9e66e92aaeb69798459ea" alt="Portada MK11" class="imagen-ajustable">
+      <p>Trailer: <a class= "trailers" href="https://www.youtube.com/watch?v=E69tKrfEQag" target="_blank">Resident Evil 4 - 2nd Trailer </a>
+      </p>
+      <br>
+    </section>
+    <br>
+  </main>
+</body>
+</html>
