@@ -207,5 +207,44 @@ ul li a {
       </ul>
     </section>
   </main>
+<!-- Elementos de audio -->
+<audio id="hover-sound" preload="auto">
+    <source src="sounds/click1.ogg" type="audio/ogg">
+</audio>
+
+<audio id="click-sound" preload="auto">
+    <source src="sounds/click2.ogg" type="audio/ogg">
+</audio>
+
+<script>
+    // Sonido al hacer hover (pasar el cursor)
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('mouseenter', function() {
+            const hoverSound = document.getElementById('hover-sound');
+            hoverSound.currentTime = 0;
+            hoverSound.play().catch(e => console.log("Error al reproducir hover:", e));
+        });
+        
+        // Sonido al hacer click - Versión corregida
+        link.addEventListener('click', function(e) {
+            // Reproduce sonido primero
+            const clickSound = document.getElementById('click-sound');
+            clickSound.currentTime = 0;
+            clickSound.play().catch(e => console.log("Error al reproducir click:", e));
+            
+            // Comportamiento diferente para enlaces con target="_blank"
+            if (this.getAttribute('target') === '_blank') {
+                // No hacer nada más, dejar que el navegador maneje el enlace normalmente
+                return;
+            }
+            
+            // Para enlaces normales:
+            e.preventDefault();
+            setTimeout(() => {
+                window.location = this.href;
+            }, 300); // Pequeño retraso para permitir que el sonido se reproduzca
+        });
+    });
+</script>
 </body>
 </html>
